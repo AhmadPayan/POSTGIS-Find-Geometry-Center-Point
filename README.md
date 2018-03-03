@@ -15,6 +15,8 @@ Execute the **ap_find_geometry_center.sql** function in the PostgreSQL and call 
     select public.ap_find_geometry_center('POLYGON((-71.1776585052917 42.3902909739571,-71.1776820268866 42.3903701743239,
     -71.1776063012595 42.3903825660754,-71.1775826583081 42.3903033653531,-71.1776585052917 42.3902909739571))')
     
-**3. Point**    
+**3. Point**
+
+Please note that it'll return the same given geometry for point type geometries.
 
     select st_astext(public.ap_find_geometry_center('POINT(-71.064544 42.28787)'))
