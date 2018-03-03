@@ -3,6 +3,7 @@ A simple plpgSQL function that returns center point of given geometry based on t
 
 
 **Usage:**
+
 Execute the **ap_find_geometry_center.sql** function in the PostgreSQL and call it like the following:
 
 **1. LineString**
