@@ -17,6 +17,6 @@ Execute the **ap_find_geometry_center.sql** function in the PostgreSQL and call 
     
 **3. Point**
 
-Please note that it'll return the same given geometry for point type geometries.
+Please notice that it'll return the same point as given geometry for point type geometries.
 
     select st_astext(public.ap_find_geometry_center('POINT(-71.064544 42.28787)'))
