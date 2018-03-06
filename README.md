@@ -1,5 +1,5 @@
 # POSTGIS-Find-Geometry-Center-Point
-A simple plpgSQL function that returns center point of given geometry which lies on the geometry based on the geometry type.
+A simple plpgSQL function that returns center point of given geometry which lies on the geometry based on the geometry type. Use this function instead of **ST_Centroid** to make sure that the returned center point is lied on the given geometry.
 
 
 **Usage:**
@@ -20,3 +20,7 @@ Execute the **ap_find_geometry_center.sql** function in the PostgreSQL and call 
 Please notice that it'll return the same point as given geometry for point type geometries.
 
     select st_astext(public.ap_find_geometry_center('POINT(-71.064544 42.28787)'))
+    
+**4. MultiLineString**
+
+    select public.ap_find_geometry_center('MULTILINESTRING((-29 -27,-30 -29.7,-36 -31,-45 -33),(-45 -33,-46 -32))')
