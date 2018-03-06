@@ -1,5 +1,5 @@
 # POSTGIS-Find-Geometry-Center-Point
-A simple plpgSQL function that returns center point of given geometry which lies on the geometry based on the geometry type. Use this function instead of **ST_Centroid** to make sure that the returned center point is lied on the given geometry.
+Use this function instead of **ST_Centroid** to make sure that the returned center point is lied on the given geometry.
 
 
 **Usage:**
