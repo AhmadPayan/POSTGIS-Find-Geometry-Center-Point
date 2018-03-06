@@ -18,9 +18,6 @@ centerOfGeometry := (select ST_LineInterpolatePoint(geometry,0.5));
 ELSIF (geometryType = 'ST_MultiLineString') THEN
 -- It'll find the nearest point to the MultiLineString
 centerOfGeometry := (select ST_ClosestPoint(geometry,ST_Centroid(geometry)));
-ELSIF (geometryType  = 'ST_Polygon' OR geometryType  = 'ST_MultiPolygon') THEN
--- ST_PointOnSurface will find the point that lies on the geometry
-centerOfGeometry := (select ST_PointOnSurface(geometry));
 ELSIF (geometryType  = 'ST_Point') THEN
 -- There is no need to do any further processing for point geometry, just return itself
 centerOfGeometry := geometry;
