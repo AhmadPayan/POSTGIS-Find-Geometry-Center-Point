@@ -1,5 +1,5 @@
 # POSTGIS-Find-Geometry-Center-Point
-Use this function instead of **ST_Centroid** to make sure that the returned center point is lied on the given geometry.
+Use this function instead of **ST_Centroid** to make sure that the returned center point is lied on the given geometry. It also can be used for dynamic senario where you don't know what the type of the geometry is and wouldn't like to call ST_Centroid for geometries like linestring or point which they have nothing to do with that. So, when you're querying more than one table with a different geometry types, this function can be helpful.
 
 
 **Usage:**
