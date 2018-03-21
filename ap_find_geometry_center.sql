@@ -14,7 +14,7 @@ geometryType := (SELECT ST_GeometryType(geometry));
 IF (geometryType = 'ST_LineString') THEN
   centerOfGeometry := (select ST_LineInterpolatePoint(geometry,0.5));
 ELSIF (geometryType = 'ST_MultiLineString') THEN
-  -- It'll find the nearest point to the MultiLineString
+  -- It'll find the most nearest point to the center of MultiLineString
   centerOfGeometry := (select ST_ClosestPoint(geometry,ST_Centroid(geometry)));
 ELSIF (geometryType  = 'ST_Point') THEN
   -- There is no need to do any further processing for point geometry, just return itself
